@@ -3,10 +3,12 @@
 namespace App\DataFixtures;
 
 use App\Entity\Article;
+use DateTime;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 
-class ArticlesFixtures extends Fixtures
+
+class ArticlesFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
@@ -18,7 +20,7 @@ class ArticlesFixtures extends Fixtures
             $article -> setTitle("Titre de l\'article n-".$i)
                      -> setContent("<p> Contenu de l'article n-".$i."</p>")
                      ->setImage("http://placehold.it/350x150")
-                     ->setCreatedAt( new \DateTime());
+                     ->setCreatedAt(new DateTime());
 
             $manager->persist($article);
         }
