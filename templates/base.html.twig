@@ -17,7 +17,7 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
-                    <a class="navbar-brand" href="/">Symblog
+                    <a class="navbar-brand" href="{{ path("home")}}">Symblog
                     </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
@@ -26,11 +26,11 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="./blog">Articles
+                                <a class="nav-link" href="{{ path("app_blog")}}">Articles
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./blog/new">creer un article
+                                <a class="nav-link" href="{{ path("blog_create")}}">creer un article
                                 </a>
                             </li>
                         </ul>

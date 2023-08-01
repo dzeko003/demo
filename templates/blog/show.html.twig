@@ -2,25 +2,13 @@
 
 {% block body %}
     <article>
-        <h2>Titre de l'article</h2>
+        <h2>{{ article.title }}</h2>
             <div class="metadata">
-                ecrit le 24/07/2023 à 22h30 dans la categorie politique
+                ecrit le 2{{article.createdAt | date('d/m/y')}} à {{article.createdAt | date('H:i')}}dans la categorie politique
             </div>
             <div class="content">
-                <img src="http://placehold.it/350x150" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto porro nam, soluta perspiciatis rerum nostrum.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto porro nam, soluta perspiciatis rerum nostrum.</p>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti totam quasi a vero dicta similique repudiandae!
-                    Cupiditate doloribus velit nesciunt qui dolores corrupti cumque voluptatum a accusamus vitae veniam illum possimus minus
-                    expedita culpa quam et, ratione consequuntur, eum consectetur odit assumenda quia! Repudiandae veniam laudantium numquam 
-                    at facere?
-                </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti totam quasi a vero dicta similique repudiandae!
-                    Cupiditate doloribus velit nesciunt qui dolores corrupti cumque voluptatum a accusamus vitae veniam illum possimus minus
-                    expedita culpa quam et, ratione consequuntur, eum consectetur odit assumenda quia! Repudiandae veniam laudantium numquam 
-                    at facere?
-                </p>
+                <img src="{{ article.image }}" alt="">
+                {{article.content | raw}}
             </div>          
     </article>
 
